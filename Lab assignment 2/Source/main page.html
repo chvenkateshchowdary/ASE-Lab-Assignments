@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign In Form</title>
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./login.css">
+        <script type="text/javascript">
+            function register() {
+                window.location = "./registration.html";
+            }
+
+            function login(){
+
+                    usr=document.getElementById("mail").value;
+                    pwd=document.getElementById("password").value;
+                    if(usr =="venkatesh" && pwd =="cherukuri")
+                    {
+                        window.location = "./home.html";
+                    }
+                    else{
+                        window.alert("enter correct mail and password");
+                    }
+            }
+        </script>
+
+    </head>
+    <body background="image1.jpg">
+
+      <form>
+      
+        <h1>Sign In</h1>
+
+          <fieldset>
+
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" required>
+
+          </fieldset>
+
+        <input type="button" id="SignIn" onclick="login();" value="Sign In"></input>
+          <input type="button" id="signUp" onclick="register();" value="Sign Up"></input>
+
+      </form>
+      
+    </body>
+</html>
