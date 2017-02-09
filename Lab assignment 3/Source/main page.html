@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="google-signin-client_id" content="379431461967-uuntipg8cegeufcnl2srtm4ih1fmo2ak.apps.googleusercontent.com">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign In Form</title>
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./login.css">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script type="text/javascript">
+
+            function register() {
+                window.location = "./registration.html";
+            }
+
+            function login(){
+
+                    usr=document.getElementById("mail").value;
+                    pwd=document.getElementById("password").value;
+                    if(usr =="venkatesh" && pwd =="cherukuri")
+                    {
+                        window.location = "./Home.html";
+                    }
+                    else{
+                        window.alert("enter correct mail and password");
+                    }
+            }
+
+        </script>
+        <script src="gmail.js"></script>
+
+    </head>
+    <body background="image1.jpg">
+
+      <form>
+      
+        <h1>Sign In</h1>
+
+          <fieldset>
+
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" required>
+
+          </fieldset>
+
+        <input type="button" id="SignIn" onclick="login();" value="Sign In"></input>
+          <input type="button" id="signUp" onclick="register();" value="Sign Up"></input>
+        <div  onclick="google()" class="g-signin2" data-onsuccess="onSignIn"></div>
+      </form>
+      
+    </body>
+</html>
