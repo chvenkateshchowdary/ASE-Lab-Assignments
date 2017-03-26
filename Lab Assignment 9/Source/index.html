@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <style>
+        body{
+            background: url("img6.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body ng-app="ap">
+<center><h1 style="color:firebrick"> Welcome to Movie Bluff...!<b></b></h1></center>
+<div ng-controller="con" style="margin-left: 50px;margin-top: 30px">
+     <b>Enter Movie name</b><input type="text" style="border-radius:20px;padding: 4px;border: 10px;height: 20px " ng-model="in"/>
+    <Button ng-click="search()" style="background-color: cornflowerblue;border-radius: 20px;padding: 4px;border: 10px;width: 70px;height: 25px">Search</Button></br>
+    <div id="col" style="display: none">
+    <p ng-model="final">
+        <table BORDER=2 CELLPADDING=6>
+        <TR><TH style="color:black; background:cornflowerblue" COLSPAN=2>Movie Mashup service API</TH></TR>
+        <TR><td><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple5/v4/3c/58/19/3c5819dd-3aaf-73f1-babb-e2d2f1f4a042/source/256x256bb.jpg"></img></td></TR>
+
+
+        <table BORDER=2 CELLPADDING=6>
+        <TR><TD style="color: white;width: 110px;font-size: larger;background-color: grey">Popularity</TD><TD style="color: brown;width: 115px;font-size: larger;text-align: center; background-color: grey">10.5895534</TD></TR>
+        <TR><TD style="color: white;width: 110px;font-size: larger;background-color: gray">Release Date</TD><TD style="color: brown;width: 115px;font-size: larger;text-align: center; background-color: grey">2010-03-26</TD></TR>
+        <TR><TD style="color: white;width: 110px;font-size: larger;background-color: gray">Description</TD><TD style="color: black;width:50%;font-size: larger;text-align: center; background-color: grey"> <h5  style="color: brown"> <b>Hiccup (Jay Baruchel) is a Norse teenager from the island of Berk, where fighting dragons is a way of life. His progressive views and weird sense of humor make him a misfit, despite the fact that his father (Gerard Butler) is chief of the clan. Tossed into dragon-fighting school, he endeavors to prove himself as a true Viking, but when he befriends an injured dragon he names Toothless, he has the chance to plot a new course for his people's future.</b></h5></TD></TR>
+        </table>
+        </p>
+        </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
